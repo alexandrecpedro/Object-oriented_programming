@@ -1,8 +1,4 @@
-package Aula11;
-
-import Aula11.Animais.Cachorro;
-import Aula11.Animais.Cavalo;
-import Aula11.Animais.Preguica;
+package Aula11.Animais;
 
 import java.util.Scanner;
 
