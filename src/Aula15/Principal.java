@@ -17,9 +17,9 @@ public class Principal {
         int ano = scan.nextInt();
         System.out.println("Comprimento: ");
         double comprim = scan.nextDouble();
-        System.out.println("Preço base: ");
+        System.out.println("Aluguel - Preço base: ");
         double priceBase = scan.nextDouble();
-        System.out.println("Valor adicional para aluguel: ");
+        System.out.println("Aluguel - Valor adicional: ");
         double aluguel = scan.nextDouble();
         System.out.println("Tipo de embarcação \n1-Veleiro \n2-Iate ");
         int tipo = scan.nextInt();
