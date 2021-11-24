@@ -1,4 +1,7 @@
-package Aula15;
+package Aula15.ResolucaoPessoal;
+
+import Aula15.ResolucaoPessoal.Capitao;
+import Aula15.ResolucaoPessoal.Embarcacao;
 
 public class Veleiro extends Embarcacao {
 //    Attributes

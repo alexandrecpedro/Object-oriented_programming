@@ -1,4 +1,4 @@
-package Aula15;
+package Aula15.ResolucaoPessoal;
 
 import java.util.Scanner;
 
