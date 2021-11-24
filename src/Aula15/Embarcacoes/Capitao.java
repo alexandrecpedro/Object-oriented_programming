@@ -1,19 +1,25 @@
-package Aula15;
+package Aula15.Embarcacoes;
 
 public class Capitao {
-//    Attributes
     private String nome;
     private String sobrenome;
     private String registroNavegacao;
 
-//    Constructor
     public Capitao(String nome, String sobrenome, String registroNavegacao) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.registroNavegacao = registroNavegacao;
     }
 
-//    Getters/Setters
+    @Override
+    public String toString() {
+        return "Capitao{" +
+                "nome='" + nome + '\'' +
+                ", sobrenome='" + sobrenome + '\'' +
+                ", registroNavegacao='" + registroNavegacao + '\'' +
+                '}';
+    }
+
     public String getNome() {
         return nome;
     }
@@ -37,6 +43,4 @@ public class Capitao {
     public void setRegistroNavegacao(String registroNavegacao) {
         this.registroNavegacao = registroNavegacao;
     }
-
-//    Methods
 }

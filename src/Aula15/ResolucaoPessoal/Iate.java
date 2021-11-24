@@ -1,4 +1,4 @@
-package Aula15;
+package Aula15.ResolucaoPessoal;
 
 public class Iate extends Embarcacao implements Comparable<Iate>{
 //    Attributes

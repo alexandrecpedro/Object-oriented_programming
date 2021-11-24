@@ -1,4 +1,6 @@
-package Aula15;
+package Aula15.ResolucaoPessoal;
+
+import Aula15.ResolucaoPessoal.Capitao;
 
 import java.text.NumberFormat;
 
