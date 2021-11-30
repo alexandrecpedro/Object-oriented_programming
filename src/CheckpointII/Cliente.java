@@ -14,5 +14,5 @@ public abstract class Cliente {
     }
 
 //    Methods
-    public abstract String printarDados();
+    public abstract String toString();
 }

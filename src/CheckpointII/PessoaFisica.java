@@ -13,7 +13,7 @@ public class PessoaFisica extends Cliente {
 //    Methods
 
     @Override
-    public String printarDados() {
+    public String toString() {
         return "Cliente - Pessoa Fisica" +
                 "\nNome: " + nome +
                 "\nEndereco: " + endereco +
