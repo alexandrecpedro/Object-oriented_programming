@@ -1,8 +1,8 @@
 package Aula20.CarrinhoDeCompras;
 
 public interface Estado {
-    void adicionarItem();
-    void cancelarCompra();
+    void adicionarProduto();
+    void cancelar();
     void retornar();
-    void avancar();
+    void proximo();
 }

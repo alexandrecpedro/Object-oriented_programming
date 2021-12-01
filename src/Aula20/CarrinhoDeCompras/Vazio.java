@@ -11,22 +11,24 @@ public class Vazio implements Estado {
 
 //    Methods
     @Override
-    public void adicionarItem() {
-        System.out.println("Produto adicionado");
+    public void adicionarProduto() {
+        carrinhoCompras.setEstado(new Carregando(carrinhoCompras));
+        System.out.println("Carrinho pode receber produtos agora");
     }
 
     @Override
-    public void cancelarCompra() {
-
+    public void cancelar() {
+        System.out.println("Carrinho já está vazio!");
     }
 
     @Override
     public void retornar() {
-
+        System.out.println("Carrinho já está vazio!");
     }
 
     @Override
-    public void avancar() {
-
+    public void proximo() {
+        carrinhoCompras.setEstado(new Carregando(carrinhoCompras));
+        System.out.println("Carrinho pode receber produtos agora");
     }
 }

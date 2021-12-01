@@ -1,32 +1,36 @@
 package Aula20.CarrinhoDeCompras;
 
 public class Pagando implements Estado {
-    //    Attributes
+//    Attributes
     private CarrinhoCompras carrinhoCompras;
 
-    //    Constructor
+//    Constructor
     public Pagando(CarrinhoCompras carrinhoCompras) {
         this.carrinhoCompras = carrinhoCompras;
     }
 
-    //    Methods
+//    Methods
     @Override
-    public void adicionarItem() {
-        System.out.println("Produto adicionado");
+    public void adicionarProduto() {
+        System.out.println("Carrinho não aceita mais produtos!");
     }
 
     @Override
-    public void cancelarCompra() {
-
+    public void cancelar() {
+        carrinhoCompras.setEstado(new Vazio(carrinhoCompras));
+        carrinhoCompras.limparCarrinho();
+        System.out.println("Carrinho foi esvaziado");
     }
 
     @Override
     public void retornar() {
-
+        carrinhoCompras.setEstado(new Carregando(carrinhoCompras));
+        System.out.println("Carrinho foi reaberto para adição de produtos");
     }
 
     @Override
-    public void avancar() {
-
+    public void proximo() {
+        carrinhoCompras.setEstado(new Fechado(carrinhoCompras));
+        System.out.println("Carrinho fechado e compra finalizada");
     }
 }
