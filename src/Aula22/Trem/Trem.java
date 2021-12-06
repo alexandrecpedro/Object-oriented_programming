@@ -2,19 +2,24 @@ package Aula22.Trem;
 
 import java.util.ArrayList;
 
-public class Trem extends Figura {
+public class Trem {
     private ArrayList<Figura> figuras = new ArrayList<>();
 
-    public void addFigura(Figura figura) {
+    public void adicionarFigura(Figura figura){
         figuras.add(figura);
     }
 
-    @Override
-    public double calcularArea() {
-        double area = 0;
-        for (Figura figura: figuras) {
-            area += figura.calcularArea();
+    public void mostrarFiguras(){
+        for(Figura figura: figuras){
+            System.out.println(figura.getNome());
         }
-        return area;
+    }
+
+    public double areaTotal(){
+        double areaTotal = 0;
+        for(Figura figura: figuras){
+            areaTotal += figura.calcularArea();
+        }
+        return areaTotal;
     }
 }
