@@ -1,7 +1,5 @@
 package Aula19.Armazem;
 
-import Aula19.Industria.EmpregadoFactory;
-
 import java.util.Scanner;
 
 public class Main {
@@ -13,29 +11,11 @@ public class Main {
         Armazem armazem = new Armazem();
 
         for (int i = 0; i < quantidadeProduto; i++) {
-            System.out.println("Categoria do produto: \n1-Caixa \n2-Bola \0-Sair");
-            int categoriaProd = scan.nextInt();
-            scan.nextLine();
-            switch (categoriaProd) {
-                case 0:
-                    break;
-                case 1:
-                    System.out.println("Dimensões da Caixa");
-                    System.out.println("Comprimento: ");
-                    double comprimento = scan.nextDouble();
-                    System.out.println("Altura: ");
-                    double altura = scan.nextDouble();
-                    System.out.println("Largura: ");
-                    double largura = scan.nextDouble();
-                    break;
-                case 2:
-                    System.out.println("Raio da Bola");
-                    double raio = scan.nextDouble();
-                    break;
-                default:
-                    System.out.println("Entre com uma categoria válida!");
-            }
+            ProdutoFactory factory = ProdutoFactory.getInstance();
+            System.out.println("Categoria do produto: \nCaixa \nBola");
+            String categoriaProd = scan.nextLine();
+            armazem.addEspaco(factory.criarProduto(categoriaProd));
         }
-        scan.close();
+        System.out.println("O espaço necessário é de: " + armazem.calcularEspacoNecessario() + " cm3");
     }
 }
